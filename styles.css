@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-image: none;
+}
+
+body{
+    background-color: rgba(31, 15, 50, 0.91);
+    height: 80vh;
+    width: 80vh;
+}
+.start-screen-container{
+    display: flex;
+    flex-direction: column;
+    background-image: url('./assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1280px;
+    height: 640px;
+    margin: 15vh 15vh;
+    align-items: center;
+    border-radius: 15px;
+}
+
+
+.start-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15vh auto;
+    display: flex;
+    gap: 20px;
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+#credits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#start{
+    cursor: pointer;
+    border: transparent;
+    height: 130px;
+}
+
+a{
+    color: white;
+}
+
+.gameScreen{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+
+.colunaEsquerda{
+    height: inherit;
+    position: absolute;
+    left: 0;
+}
+
+.teiaEsquerda{
+    position: absolute;
+    height: 40%;
+    top: 0;
+    left: 0;
+}
+
+.colunaDireita{
+    height: inherit;
+    position: absolute;
+    right: 0;
+}
+
+.teiaDireita{
+    position: absolute;
+    right: 0;
+    width: 350px;
+    top: 0;
+}
+
+.squares{
+    background-image: url('./assets/container.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 460px;
+    width: 469px;
+    position: relative;
+    top: 10px;
+    padding: 40px;
+    justify-items: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#gamelogo{
+    position: absolute;
+    width: 75%;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-52.5%);
+}
+
+#moneybag{
+    position: absolute;
+    left: 84%;
+    top: 75%;
+    height: 150px;
+    z-index: 2;
+}
+
+#pepita{
+    height: 80px;
+    position: absolute;
+    bottom: 18px;
+    right: -96px;
+    z-index: 1;
+}
+
+#coins{
+    height: 100px;
+    position: absolute;
+    bottom: -20px;
+    left: -59px;
+}
+
+.general{
+    height: 100px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 11px;
+}
+
+.camp1{
+    background-image: url('./assets/square1.svg');
+
+
+}
+.camp2{
+    background-image: url('./assets/square2.svg');
+
+}
+
+.camp3{
+    background-image: url('./assets/square3.svg');
+}
+
+.camp4{
+    background-image: url('./assets/square4.svg');
+}
+
+.gameOver{
+    display: none;
+    flex-direction: column;
+    margin: 15vh auto;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.gameOverLogo{
+    height: 180px;
+    width: 550px;
+}
+
+
+.tryAgain{
+    height: 120px;
+    cursor: pointer;
+}
+
+.gameWin{
+    display: none;
+    flex-direction: column;
+    margin: 15vh auto;
+    gap: 45px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.gameWinLogo{
+    height: 180px;
+    width: 550px;
+}
+
+
+.playAgain{
+    height: 95px;
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    10% { transform: translate(-10px, 10px); }
+    20% { transform: translate(-10px, -10px); }
+    30% { transform: translate(10px, 10px); }
+    40% { transform: translate(-10px, 10px); }
+    50% { transform: translate(10px, -10px); }
+    60% { transform: translate(10px, 10px); }
+    70% { transform: translate(-10px, -10px); }
+    80% { transform: translate(10px, -10px); }
+    90% { transform: translate(-10px, 10px); }
+    100% { transform: translate(0); }
+  }
+
+  .shake {
+    animation: shake 0.5s;
+  }
+
+
+
